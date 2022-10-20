@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab5</title>
+<link rel="stylesheet" type="text/css" href="index.css" />
+<style>
+body{
+	font-family:Arial;
+	margin:0;
+	padding:0;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 300px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(255,255,255);
+	background-color: rgba(255,255,255,0.4);
+}
+
+.modalcontent {
+	background-color:#E3F56C;
+	margin: auto;
+	padding: 20px;
+	width: 500px;
+	text-align:left;
+}
+
+.box{
+	background-color:#CCFFFF;
+	color:black;
+	width:800px;
+	border-left:2px solid #d0d0d0;
+	border-right:2px solid #d0d0d0;
+	border-bottom:2px solid black;
+	padding:10px;
+}
+
+.box:hover{
+	background-color:#ff6666;
+}
+
+button{
+	background-color:dimgray;
+	color:white;
+	padding:10px;
+	border:1px solid #d0d0d0;
+	box-shadow: 0px 25px 25px 0px lime inset;
+	cursor: pointer;
+}
+
+button:active {
+	transform:translateY(2px);
+}
+</style>
+
+<body>
+<center>
+<div class="box">
+<div style="text-align:left;">
+<div style="padding-top:5px;padding-bottom:5px;font-size:20px;">
+<b>Новость 1</b>
+</div>
+<div>
+Lorem ipsum dolor sit amet consectetur, adipiscing elit. Beatae voluptatum suscipit sed delectus facere veritatis autem quisquam unde nam doloribus?
+</div>
+</div>
+
+<button id="Btn1">Открыть всплывающее окно</button>
+<div id="Modal1" class="modal">
+	<div class="modalcontent">
+		<center>
+		<div style="font-size:30px;padding-bottom:30px;">
+		<b>Новость 1</b>
+		</div>
+		</center>
+		<div>
+		Новость 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores aut nihil! Corporis debitis labore fugiat id, eligendi ratione veritatis!
+		</div>
+		<div>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero vitae, repudiandae praesentium.
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="box">
+<div style="text-align:left;">
+<div style="padding-top:5px;padding-bottom:5px;font-size:20px;">
+<b>Новость 2</b>
+</div>
+<div>
+Lorem ipsum dolor sit amet consectetur, adipiscing elit. Beatae voluptatum suscipit sed delectus facere veritatis autem quisquam unde nam doloribus?
+</div>
+</div>
+
+<button id="Btn2">Открыть всплывающее окно</button>
+<div id="Modal2" class="modal">
+	<div class="modalcontent">
+		<center>
+		<div style="font-size:30px;padding-bottom:30px;">
+		<b>Новость 2</b>
+		</div>
+		</center>
+		<div>
+		Новость 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. A, aslias.
+		</div>
+		<div>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero vitae, repudiandae praesentium.
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="box">
+<div style="text-align:left;">
+<div style="padding-top:5px;padding-bottom:5px;font-size:20px;">
+<b>Новость 3</b>
+</div>
+<div>
+Lorem ipsum dolor sit amet consectetur, adipiscing elit. Beatae voluptatum suscipit sed delectus facere veritatis autem quisquam unde nam doloribus?
+</div>
+</div>
+
+<button onclick="FunctionOpen3()">Открыть всплывающее окно</button>
+</div>
+</center>
+
+<script>
+var modal1 = document.getElementById("Modal1");
+var modal2 = document.getElementById("Modal2");
+var btn1 = document.getElementById("Btn1");
+var btn2 = document.getElementById("Btn2");
+
+btn1.onclick = function() {
+	modal1.style.display = "block";
+}
+
+btn2.onclick = function() {
+	modal2.style.display = "block";
+}
+
+window.onclick = function(event) {
+	if (event.target == modal1) {
+		modal1.style.display = "none";
+	}
+	if (event.target == modal2) {
+		modal2.style.display = "none";
+	}
+}
+</script>
+</body>
+</html>
